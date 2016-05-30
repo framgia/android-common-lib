@@ -24,7 +24,7 @@ task checkstyle(type: Checkstyle) {
     showViolations = true
     configFile file("${project.rootDir}/config/checkstyle/google_checks.xml")
     configProperties.checkstyleSuppressionsPath = file("${project.rootDir}/config/checkstyle/suppressions.xml")
-    source 'src'
+    source 'src/main/java'
     include '**/*.java'
     exclude '**/gen/**'
     classpath = files()
@@ -64,7 +64,7 @@ task pmd(type: Pmd) {
     ignoreFailures = true
     ruleSetFiles = files("${project.rootDir}/config/pmd/ruleset.xml")
 
-    source 'src'
+    source 'src/main/java'
     include '**/*.java'
     exclude '**/gen/**'
 

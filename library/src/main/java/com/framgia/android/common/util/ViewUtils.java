@@ -1,6 +1,7 @@
 package com.framgia.android.common.util;
 
 import android.os.Build;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
